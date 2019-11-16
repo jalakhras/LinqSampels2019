@@ -18,6 +18,8 @@ namespace Features
                 new Employee{Id=3,Name="Jaffar"}
             };
             IEnumerator<Employee> enumerator = developers.GetEnumerator();
+            Console.WriteLine(developers.Count());
+
             while (enumerator.MoveNext())
             {
                 Console.WriteLine(enumerator.Current.Name);

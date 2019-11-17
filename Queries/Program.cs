@@ -28,7 +28,8 @@ namespace Queries
             //            orderby movie.Rating descending
             //            select movie;
 
-            var query = movies.Filter(m => m.Year > 200);
+            var query = movies.WhereIf(true,x=>x.Year >= 2008);
+            var query2 = movies.WhereIf(false,x=>x.Year >= 2008);
             var enumerator = query.GetEnumerator();
             while (enumerator.MoveNext())
             {

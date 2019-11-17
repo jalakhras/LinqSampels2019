@@ -8,11 +8,11 @@ namespace Queries
     {
         static void Main(string[] args)
         {
-            var numbers = MyLinq.Random().Where(n => n > 0.5).Take(10).OrderBy(n => n);
-            foreach (var number in numbers)
-            {
-                Console.WriteLine(number);
-            }
+            //var numbers = MyLinq.Random().Where(n => n > 0.5).Take(10).OrderBy(n => n);
+            //foreach (var number in numbers)
+            //{
+            //    Console.WriteLine(number);
+            //}
 
 
             var movies = new List<Movie>

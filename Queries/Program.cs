@@ -23,13 +23,14 @@ namespace Queries
                 new Movie { Title = "Star Wars V",       Rating = 8.7f, Year = 1980 }
             };
 
+
             //var query = from movie in movies
             //            where movie.Year > 2000
             //            orderby movie.Rating descending
             //            select movie;
 
-            var query = movies.WhereIf(true,x=>x.Year >= 2008);
-            var query2 = movies.WhereIf(false,x=>x.Year >= 2008);
+            var query = movies.Filter(x => x.Year >= 2008);
+            //var query2 = movies.WhereIf(false,x=>x.Year >= 2008);
             var enumerator = query.GetEnumerator();
             while (enumerator.MoveNext())
             {
